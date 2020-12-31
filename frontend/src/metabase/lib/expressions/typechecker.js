@@ -39,17 +39,11 @@ export function typeCheck(cst, startRule) {
       });
     }
 
-    metricExpression(ctx) {
-      const type = this.typeStack[0];
-      if (type !== "aggregation" && type !== "expression") {
-        throw new Error("Incorrect type for metric");
-      }
-      return super.metricExpression(ctx);
-    }
-
     dimensionExpression(ctx) {
       const type = this.typeStack[0];
-      if (type === "boolean") {
+      if (type === "aggregation") {
+        ctx.resolveAs = "metric";
+      } else if (type === "boolean") {
         ctx.resolveAs = "segment";
       } else {
         ctx.resolveAs = "dimension";

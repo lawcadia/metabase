@@ -47,18 +47,15 @@ export function typeCheck(cst, startRule) {
       return super.metricExpression(ctx);
     }
 
-    segmentExpression(ctx) {
-      const type = this.typeStack[0];
-      if (type !== "boolean") {
-        throw new Error("Incorrect type for segment");
-      }
-      return super.segmentExpression(ctx);
-    }
-
     dimensionExpression(ctx) {
       const type = this.typeStack[0];
-      if (type === "boolean" || type === "aggregation") {
-        throw new Error("Incorrect type for dimension");
+      if (type === "boolean") {
+        ctx.resolveAs = "segment";
+      } else {
+        ctx.resolveAs = "dimension";
+        if (type === "aggregation") {
+          throw new Error("Incorrect type for dimension");
+        }
       }
       return super.dimensionExpression(ctx);
     }

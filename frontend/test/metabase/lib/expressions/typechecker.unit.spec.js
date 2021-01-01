@@ -83,6 +83,7 @@ describe("type-checker", () => {
       expect(filter("NOT NOT [Deal]").segments).toEqual(["Deal"]);
       expect(filter("P > 3").segments).toEqual([]);
       expect(filter("R<1 AND [S]>4").segments).toEqual([]);
+      expect(filter("5 <= Q").segments).toEqual([]);
       expect(filter("Between([BIG],3,7)").segments).toEqual([]);
       expect(filter("Contains([GI],'Joe')").segments).toEqual([]);
     });
@@ -93,11 +94,12 @@ describe("type-checker", () => {
       expect(filter("NOT NOT [Deal]").dimensions).toEqual([]);
       expect(filter("P > 3").dimensions).toEqual(["P"]);
       expect(filter("R<1 AND [S]>4").dimensions).toEqual(["R", "S"]);
+      expect(filter("5 <= Q").dimensions).toEqual(["Q"]);
       expect(filter("Between([BIG],3,7)").dimensions).toEqual(["BIG"]);
       expect(filter("Contains([GI],'Joe')").dimensions).toEqual(["GI"]);
     });
 
-    it.skip("should resolve dimensions and segments correctly", () => {
+    it("should resolve dimensions and segments correctly", () => {
       expect(filter("[A] OR [B]>0").segments).toEqual(["A"]);
       expect(filter("[A] OR [B]>0").dimensions).toEqual(["B"]);
       expect(filter("[X]=4 AND NOT [Y]").segments).toEqual(["Y"]);
@@ -118,6 +120,7 @@ describe("type-checker", () => {
       expect(aggregation("CountIf([Tax]>13)").dimensions).toEqual(["Tax"]);
       expect(aggregation("Sum([Total]*2)").dimensions).toEqual(["Total"]);
       expect(aggregation("[Total]").dimensions).toEqual([]);
+      expect(aggregation("CountIf(4>[A]+[B])").dimensions).toEqual(["A", "B"]);
     });
 
     it("should resolve metrics correctly", () => {
@@ -127,6 +130,7 @@ describe("type-checker", () => {
       expect(aggregation("CountIf([Tax]>13)").metrics).toEqual([]);
       expect(aggregation("Sum([Total]*2)").metrics).toEqual([]);
       expect(aggregation("[Total]").metrics).toEqual(["Total"]);
+      expect(aggregation("CountIf(4>[A]+[B])").metrics).toEqual([]);
     });
 
     it("should resolve dimensions and metrics correctly", () => {

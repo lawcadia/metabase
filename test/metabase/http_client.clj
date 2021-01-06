@@ -10,7 +10,7 @@
             [metabase
              [config :as config]
              [util :as u]]
-            [metabase.middleware.session :as mw.session]
+            [metabase.server.middleware.session :as mw.session]
             [metabase.test.initialize :as initialize]
             [metabase.test.util.log :as tu.log]
             [metabase.util

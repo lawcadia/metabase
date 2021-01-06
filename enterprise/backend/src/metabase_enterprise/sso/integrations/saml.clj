@@ -15,7 +15,7 @@
              [common :as api]
              [session :as session]]
             [metabase.integrations.common :as integrations.common]
-            [metabase.middleware.session :as mw.session]
+            [metabase.server.middleware.session :as mw.session]
             [metabase.util.i18n :refer [trs tru]]
             [ring.util
              [codec :as codec]

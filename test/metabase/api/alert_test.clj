@@ -8,16 +8,15 @@
              [models :refer [Card Collection Pulse PulseCard PulseChannel PulseChannelRecipient]]
              [test :as mt]
              [util :as u]]
-            [metabase.middleware.util :as middleware.u]
             [metabase.models
              [permissions :as perms]
              [permissions-group :as group]
              [pulse :as pulse]
              [pulse-test :as pulse-test]]
-            [metabase.test.util :as tu]
+            [metabase.server.middleware.util :as middleware.u]
             [metabase.test.data.users :as users :refer :all]
             [metabase.test.mock.util :refer [pulse-channel-defaults]]
-            [schema.core :as s]
+            [metabase.test.util :as tu]
             [toucan.db :as db]
             [toucan.util.test :as tt]))
 

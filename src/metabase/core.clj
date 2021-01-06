@@ -8,7 +8,6 @@
              [config :as config]
              [db :as mdb]
              [events :as events]
-             [handler :as handler]
              [metabot :as metabot]
              [plugins :as plugins]
              [sample-data :as sample-data]
@@ -20,6 +19,7 @@
             [metabase.core.initialization-status :as init-status]
             [metabase.models.user :refer [User]]
             [metabase.plugins.classloader :as classloader]
+            [metabase.server.handler :as handler]
             [metabase.util.i18n :refer [deferred-trs trs]]
             [toucan.db :as db]))
 

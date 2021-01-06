@@ -5,7 +5,7 @@
              [gtap :as gtap]
              [table :as table]
              [user :as user]]
-            [metabase.middleware.auth :as middleware.auth]))
+            [metabase.server.middleware.auth :as middleware.auth]))
 
 ;; this is copied from `metabase.api.routes` because if we require that above we will destroy startup times for `lein
 ;; ring server`
@@ -17,6 +17,7 @@
   (compojure/context
    "/mt"
    []
+
    (compojure/routes
     (compojure/context "/gtap" [] (+auth gtap/routes))
     (compojure/context "/user" [] (+auth user/routes))))

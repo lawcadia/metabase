@@ -13,11 +13,11 @@
              [util :as u]]
             [metabase.api.table :as table-api]
             [metabase.driver.util :as driver.u]
-            [metabase.middleware.util :as middleware.u]
             [metabase.models
              [permissions :as perms]
              [permissions-group :as perms-group]
              [table :as table]]
+            [metabase.server.middleware.util :as middleware.u]
             [metabase.test
              [data :as data]
              [util :as tu]]

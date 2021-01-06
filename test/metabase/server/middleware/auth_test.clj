@@ -1,11 +1,11 @@
-(ns metabase.middleware.auth-test
+(ns metabase.server.middleware.auth-test
   (:require [clojure.test :refer :all]
             [java-time :as t]
-            [metabase.middleware
+            [metabase.models.session :refer [Session]]
+            [metabase.server.middleware
              [auth :as mw.auth]
              [session :as mw.session]
              [util :as middleware.u]]
-            [metabase.models.session :refer [Session]]
             [metabase.test :as mt]
             [metabase.test.data.users :as test-users]
             [metabase.test.fixtures :as fixtures]

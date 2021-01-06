@@ -9,7 +9,7 @@
              [common :as api]
              [session :as session]]
             [metabase.integrations.common :as integrations.common]
-            [metabase.middleware.session :as mw.session]
+            [metabase.server.middleware.session :as mw.session]
             [metabase.util.i18n :refer [tru]]
             [ring.util.response :as resp])
   (:import java.net.URLEncoder))

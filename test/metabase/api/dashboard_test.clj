@@ -13,7 +13,6 @@
             [metabase.api
              [card-test :as card-api-test]
              [dashboard :as dashboard-api]]
-            [metabase.middleware.util :as middleware.u]
             [metabase.models
              [card :refer [Card]]
              [collection :refer [Collection]]
@@ -28,6 +27,7 @@
              [revision :refer [Revision]]
              [table :refer [Table]]]
             [metabase.models.params.chain-filter-test :as chain-filter-test]
+            [metabase.server.middleware.util :as middleware.u]
             [ring.util.codec :as codec]
             [toucan.db :as db]
             [toucan.util.test :as tt])

@@ -2,7 +2,7 @@
   (:require [expectations :refer [expect]]
             [metabase.api.common :as api :refer :all]
             [metabase.api.common.internal :refer :all]
-            [metabase.middleware
+            [metabase.server.middleware
              [exceptions :as mw.exceptions]
              [misc :as mw.misc]
              [security :as mw.security]]

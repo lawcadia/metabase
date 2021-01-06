@@ -10,12 +10,12 @@
              [test :as mt]
              [util :as u]]
             [metabase-enterprise.sso.integrations.sso-settings :as sso-settings]
-            [metabase.middleware.session :as mw.session]
             [metabase.models
              [permissions-group :as group :refer [PermissionsGroup]]
              [permissions-group-membership :refer [PermissionsGroupMembership]]
              [user :refer [User]]]
             [metabase.public-settings.metastore-test :as metastore-test]
+            [metabase.server.middleware.session :as mw.session]
             [metabase.test
              [fixtures :as fixtures]
              [util :as tu]]

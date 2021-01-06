@@ -1,4 +1,4 @@
-(ns metabase.middleware.security
+(ns metabase.server.middleware.security
   "Ring middleware for adding security-related headers to API responses."
   (:require [clojure.java.io :as io]
             [clojure.string :as str]
@@ -6,8 +6,8 @@
             [metabase
              [config :as config]
              [public-settings :as public-settings]]
-            [metabase.middleware.util :as middleware.u]
             [metabase.models.setting :refer [defsetting]]
+            [metabase.server.middleware.util :as middleware.u]
             [metabase.util.i18n :as ui18n :refer [deferred-tru]]
             [ring.util.codec :refer [base64-encode]])
   (:import java.security.MessageDigest))

@@ -13,11 +13,11 @@
             [metabase.api.common :as api]
             [metabase.email.messages :as email]
             [metabase.integrations.ldap :as ldap]
-            [metabase.middleware.session :as mw.session]
             [metabase.models
              [session :refer [Session]]
              [setting :as setting :refer [defsetting]]
              [user :as user :refer [User]]]
+            [metabase.server.middleware.session :as mw.session]
             [metabase.util
              [i18n :as ui18n :refer [deferred-tru trs tru]]
              [password :as pass]

@@ -1,13 +1,13 @@
 (ns metabase-enterprise.sandbox.api.gtap-test
   (:require [expectations :refer :all]
+            [metabase-enterprise.sandbox.models.group-table-access-policy :refer [GroupTableAccessPolicy]]
             [metabase.http-client :as http]
-            [metabase.middleware.util :as middleware.u]
             [metabase.models
              [card :refer [Card]]
              [permissions-group :refer [PermissionsGroup]]
              [table :refer [Table]]]
-            [metabase-enterprise.sandbox.models.group-table-access-policy :refer [GroupTableAccessPolicy]]
             [metabase.public-settings.metastore :as metastore]
+            [metabase.server.middleware.util :as middleware.u]
             [metabase.test.data.users :refer :all]
             [metabase.test.util :as tu]
             [toucan.util.test :as tt]))

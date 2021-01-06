@@ -2,7 +2,7 @@
   (:require [buddy.core
              [codecs :as codecs]
              [nonce :as nonce]]
-            [metabase.middleware
+            [metabase.server.middleware
              [misc :as mw.misc]
              [util :as mw.util]]
             [metabase.util :as u]

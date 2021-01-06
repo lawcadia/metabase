@@ -1,4 +1,4 @@
-(ns metabase.middleware.log
+(ns metabase.server.middleware.log
   "Ring middleware for logging API requests/responses."
   (:require [clojure.core.async :as a]
             [clojure.string :as str]
@@ -10,7 +10,7 @@
              [streaming-response :as streaming-response]
              [util :as async.u]]
             [metabase.async.streaming-response.thread-pool :as streaming-response.thread-pool]
-            [metabase.middleware.util :as middleware.u]
+            [metabase.server.middleware.util :as middleware.u]
             [metabase.util.i18n :refer [trs]]
             [toucan.db :as db])
   (:import clojure.core.async.impl.channels.ManyToManyChannel

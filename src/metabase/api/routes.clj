@@ -44,10 +44,10 @@
             [metabase.api.advanced-computation
              [authenticated :as advcomp-auth]
              [public :as advcomp-public]]
-            [metabase.middleware
+            [metabase.plugins.classloader :as classloader]
+            [metabase.server.middleware
              [auth :as middleware.auth]
              [exceptions :as middleware.exceptions]]
-            [metabase.plugins.classloader :as classloader]
             [metabase.util.i18n :refer [deferred-tru]]))
 
 (u/ignore-exceptions (classloader/require '[metabase-enterprise.sandbox.api.routes :as ee.sandbox.routes]))

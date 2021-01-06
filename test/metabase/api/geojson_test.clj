@@ -5,7 +5,7 @@
              [test :as mt]
              [util :as u]]
             [metabase.api.geojson :as geojson-api]
-            [metabase.middleware.security :as mw.security]
+            [metabase.server.middleware.security :as mw.security]
             [schema.core :as s]))
 
 (def ^:private ^String test-geojson-url

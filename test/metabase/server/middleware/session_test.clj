@@ -1,4 +1,4 @@
-(ns metabase.middleware.session-test
+(ns metabase.server.middleware.session-test
   (:require [clojure
              [string :as str]
              [test :refer :all]]
@@ -12,7 +12,7 @@
             [metabase.api.common :refer [*current-user* *current-user-id*]]
             [metabase.core.initialization-status :as init-status]
             [metabase.driver.sql.query-processor :as sql.qp]
-            [metabase.middleware.session :as mw.session]
+            [metabase.server.middleware.session :as mw.session]
             [metabase.test.data.users :as test-users]
             [metabase.util.i18n :as i18n]
             [ring.mock.request :as mock]

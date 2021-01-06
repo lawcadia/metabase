@@ -4,7 +4,6 @@
             [metabase
              [http-client :as http]
              [util :as u]]
-            [metabase.middleware.util :as middleware.u]
             [metabase.models
              [database :refer [Database]]
              [permissions :as perms]
@@ -12,6 +11,7 @@
              [revision :refer [Revision]]
              [segment :as segment :refer [Segment]]
              [table :refer [Table]]]
+            [metabase.server.middleware.util :as middleware.u]
             [metabase.test
              [data :refer :all]
              [util :as tu]]

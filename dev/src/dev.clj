@@ -6,7 +6,6 @@
              [core :as mbc]
              [db :as mdb]
              [driver :as driver]
-             [handler :as handler]
              [plugins :as pluguns]
              [server :as server]
              [test :as mt]
@@ -28,7 +27,7 @@
   []
   (when-not @initialized?
     (init!))
-  (metabase.server/start-web-server! #'metabase.handler/app)
+  (metabase.server/start-web-server! #'metabase.server.handler/app)
   (metabase.db/setup-db!)
   (metabase.plugins/load-plugins!)
   (metabase.core.initialization-status/set-complete!))

@@ -7,12 +7,12 @@
              [models :refer [Database]]
              [task :as task]
              [test :as mt]]
-            [metabase.middleware.session :as mw.session]
             [metabase.models
              [database :as mdb]
              [permissions :as perms]
              [user :as user]]
             [metabase.plugins.classloader :as classloader]
+            [metabase.server.middleware.session :as mw.session]
             [schema.core :as s]
             [toucan.db :as db]))
 

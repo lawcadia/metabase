@@ -7,13 +7,13 @@
              [http-client :as http]
              [test :as mt]
              [util :as u]]
-            [metabase.middleware.util :as middleware.u]
             [metabase.models
              [collection :as collection :refer [Collection]]
              [permissions-group :as group :refer [PermissionsGroup]]
              [permissions-group-membership :refer [PermissionsGroupMembership]]
              [user :refer [User]]
              [user-test :as user-test]]
+            [metabase.server.middleware.util :as middleware.u]
             [metabase.test
              [data :refer :all]
              [fixtures :as fixtures]

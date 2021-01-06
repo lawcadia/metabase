@@ -10,13 +10,13 @@
              [card-test :as card-api-test]
              [pulse :as pulse-api]]
             [metabase.integrations.slack :as slack]
-            [metabase.middleware.util :as middleware.u]
             [metabase.models
              [permissions :as perms]
              [permissions-group :as perms-group]
              [pulse :as pulse]
              [pulse-test :as pulse-test]]
             [metabase.pulse.render.png :as png]
+            [metabase.server.middleware.util :as middleware.u]
             [metabase.test.mock.util :refer [pulse-channel-defaults]]
             [schema.core :as s]
             [toucan.db :as db]))

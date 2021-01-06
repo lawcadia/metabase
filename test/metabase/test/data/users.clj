@@ -5,8 +5,8 @@
             [metabase
              [http-client :as http]
              [util :as u]]
-            [metabase.middleware.session :as mw.session]
             [metabase.models.user :as user :refer [User]]
+            [metabase.server.middleware.session :as mw.session]
             [metabase.test.initialize :as initialize]
             [schema.core :as s]
             [toucan.db :as db])

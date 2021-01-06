@@ -6,7 +6,6 @@
             [clojure.walk :as walk]
             [medley.core :as m]
             [metabase.mbql.normalize :as normalize]
-            [metabase.middleware.session :as session]
             [metabase.models
              [card :as card :refer [Card]]
              [interface :as i]

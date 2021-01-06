@@ -9,13 +9,11 @@
             [medley.core :as m]
             [metabase
              [http-client :as http :refer :all]
-             [models :refer [Card CardFavorite Collection Dashboard Database Pulse PulseCard PulseChannel
-                             PulseChannelRecipient Table ViewLog]]
+             [models :refer [Card CardFavorite Collection Dashboard Database Pulse PulseCard PulseChannel PulseChannelRecipient Table ViewLog]]
              [test :as mt]
              [util :as u]]
             [metabase.api.card :as card-api]
             [metabase.driver.sql-jdbc.execute :as sql-jdbc.execute]
-            [metabase.middleware.util :as middleware.u]
             [metabase.models
              [permissions :as perms]
              [permissions-group :as perms-group]]
@@ -23,6 +21,7 @@
             [metabase.query-processor.middleware
              [constraints :as constraints]
              [results-metadata :as results-metadata]]
+            [metabase.server.middleware.util :as middleware.u]
             [schema.core :as s]
             [toucan.db :as db])
   (:import java.io.ByteArrayInputStream

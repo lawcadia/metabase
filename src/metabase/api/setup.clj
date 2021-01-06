@@ -11,7 +11,6 @@
              [common :as api]
              [database :as database-api :refer [DBEngineString]]]
             [metabase.integrations.slack :as slack]
-            [metabase.middleware.session :as mw.session]
             [metabase.models
              [card :refer [Card]]
              [collection :refer [Collection]]
@@ -24,6 +23,7 @@
              [table :refer [Table]]
              [user :as user :refer [User]]]
             [metabase.models.setting.cache :as setting.cache]
+            [metabase.server.middleware.session :as mw.session]
             [metabase.util
              [i18n :as i18n :refer [tru]]
              [schema :as su]]

@@ -10,7 +10,6 @@
             [metabase.mbql
              [normalize :as normalize]
              [util :as mbql.u]]
-            [metabase.middleware.session :as session]
             [metabase.models
              [collection :as collection]
              [dependency :as dependency]
@@ -23,6 +22,7 @@
             [metabase.models.query.permissions :as query-perms]
             [metabase.plugins.classloader :as classloader]
             [metabase.query-processor.util :as qputil]
+            [metabase.server.middleware.session :as session]
             [metabase.util.i18n :as ui18n :refer [tru]]
             [toucan
              [db :as db]

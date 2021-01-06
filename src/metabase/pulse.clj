@@ -7,7 +7,6 @@
              [util :as u]]
             [metabase.email.messages :as messages]
             [metabase.integrations.slack :as slack]
-            [metabase.middleware.session :as session]
             [metabase.models
              [card :refer [Card]]
              [dashboard :refer [Dashboard]]
@@ -16,6 +15,7 @@
              [pulse :as pulse :refer [Pulse]]]
             [metabase.pulse.render :as render]
             [metabase.query-processor.timezone :as qp.timezone]
+            [metabase.server.middleware.session :as session]
             [metabase.util
              [i18n :refer [deferred-tru trs tru]]
              [ui-logic :as ui]

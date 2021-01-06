@@ -47,8 +47,8 @@
 
 (defn- apply-middleware [handler]
   (reduce
-   (fn [handler middleware]
-     (middleware handler))
+   (fn [handler middleware-fn]
+     (middleware-fn handler))
    handler
    middleware))
 

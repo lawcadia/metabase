@@ -12,6 +12,7 @@
              [table :as table]]
             [metabase.plugins.classloader :as classloader]
             [metabase.query-processor.error-type :as qp.error-type]
+            [metabase.server.middleware.session :as session]
             [metabase.util :as u]
             [metabase.util
              [i18n :refer [tru]]

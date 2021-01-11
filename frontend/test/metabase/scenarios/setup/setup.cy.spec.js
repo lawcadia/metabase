@@ -20,7 +20,7 @@ describe("scenarios > setup", () => {
         },
       });
       cy.location("pathname").should("eq", "/setup");
-      cy.findByText("Welcome to Metabase");
+      cy.findByText("Welcome to Lawcadia Metabase");
       cy.findByText("Let's get started").click();
 
       // ========

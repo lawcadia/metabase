@@ -53,7 +53,7 @@ export default class UserSettings extends Component {
             p={[2, 2, 4]}
           >
             <UserAvatar user={user} mb={[1, 2]} size={["3em", "4em", "5em"]} />
-            <h2>{t`Account settings`}</h2>
+            <h2>{t`Account Settings`}</h2>
           </Flex>
 
           {showChangePassword && (

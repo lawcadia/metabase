@@ -92,6 +92,9 @@ import Overworld from "metabase/containers/Overworld";
 import ArchiveApp from "metabase/home/containers/ArchiveApp";
 import SearchApp from "metabase/home/containers/SearchApp";
 
+// Lawcadia Pages
+import LawcadiaSession from "metabase/lawcadia/LawcadiaSession";
+
 const MetabaseIsSetup = UserAuthWrapper({
   predicate: authData => !authData.hasSetupToken,
   failureRedirectPath: "/setup",
@@ -167,6 +170,8 @@ export const getRoutes = store => (
       <Route path="/auth" component={AuthApp}>
         <IndexRedirect to="/auth/login" />
         <Route component={IsNotAuthenticated}>
+          {/* LAWCADIA */}
+          <Route path="session" title={t`Lawcadia`} component={LawcadiaSession} />
           <Route path="login" title={t`Login`} component={LoginApp} />
           <Route path="login/:provider" title={t`Login`} component={LoginApp} />
         </Route>

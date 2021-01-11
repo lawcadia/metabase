@@ -40,18 +40,18 @@ export default class ProfileLink extends Component {
     const adminContext = this.props.context === "admin";
     return [
       {
-        title: t`Account settings`,
+        title: t`Account Settings`,
         icon: null,
         link: Urls.accountSettings(),
         event: `Navbar;Profile Dropdown;Edit Profile`,
       },
       ...(admin && [
         {
-          title: adminContext ? t`Exit admin` : t`Admin`,
+          title: adminContext ? t`Exit Lawcadia Admin` : t`Lawcadia Admin`,
           icon: null,
           link: adminContext ? "/" : "/admin",
           event: `Navbar;Profile Dropdown;${
-            adminContext ? "Exit Admin" : "Enter Admin"
+            adminContext ? "Exit Lawcadia Admin" : "Enter Lawcadia Admin"
           }`,
         },
       ]),
@@ -110,7 +110,7 @@ export default class ProfileLink extends Component {
               <h2
                 style={{ fontSize: "1.75em" }}
                 className="text-dark"
-              >{t`Thanks for using Metabase!`}</h2>
+              >{t`Lawcadia Metabase!`}</h2>
               <div className="pt2">
                 <h3 className="text-dark mb1">
                   {t`You're on version`} {tag}
@@ -135,10 +135,10 @@ export default class ProfileLink extends Component {
                 className="p2 h5 text-centered text-medium border-top"
               >
                 <span className="block">
-                  <span className="text-bold">Metabase</span>{" "}
+                  <span className="text-bold">Lawcadia Metabase</span>{" "}
                   {t`is a Trademark of`} Metabase, Inc
                 </span>
-                <span>{t`and is built with care in San Francisco, CA`}</span>
+                <span>{t`and is built with care with Lawcadia Team`}</span>
               </div>
             )}
           </Modal>

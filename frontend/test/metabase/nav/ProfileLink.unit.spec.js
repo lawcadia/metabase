@@ -15,7 +15,7 @@ describe("ProfileLink", () => {
             .generateOptionsForUser()
             .map(o => o.title),
         ).toEqual([
-          "Account settings",
+          "Account Settings",
           "Activity",
           "Help",
           "About Metabase",

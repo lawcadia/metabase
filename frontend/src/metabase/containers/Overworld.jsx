@@ -320,7 +320,7 @@ class Overworld extends React.Component {
                             >
                               <Icon
                                 name="database"
-                                color={color("database")}
+                                color={color("brand")}
                                 mb={3}
                                 size={28}
                               />

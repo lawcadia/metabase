@@ -32,7 +32,7 @@ function DatabaseBrowser({ databases }) {
               <Card p={3} hover={{ color: color("brand") }}>
                 <Icon
                   name="database"
-                  color={color("accent2")}
+                  color={color("brand")}
                   mb={3}
                   size={28}
                 />

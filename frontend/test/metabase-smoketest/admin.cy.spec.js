@@ -21,7 +21,7 @@ describe("metabase-smoketest > admin", () => {
     it("should set up Metabase", () => {
       // This is a simplified version of the "scenarios > setup" test
       cy.visit("/");
-      cy.findByText("Welcome to Metabase");
+      cy.findByText("Welcome to Lawcadia Metabase");
       cy.url().should("not.include", "login");
       cy.findByText("Let's get started").click();
 
@@ -270,7 +270,7 @@ describe("metabase-smoketest > admin", () => {
       cy.get(".Icon-gear").click();
       cy.findByText("Admin").click();
 
-      cy.findByText("Metabase Admin");
+      cy.findByText("Lawcadia Admin");
       cy.findByText("dashboard").should("not.exist");
 
       cy.findByText("People").click();

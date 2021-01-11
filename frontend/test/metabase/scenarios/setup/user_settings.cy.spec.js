@@ -12,7 +12,7 @@ describe("user > settings", () => {
 
   it("should show user details", () => {
     cy.visit("/user/edit_current");
-    cy.findByText("Account settings");
+    cy.findByText("Account Settings");
     cy.findByDisplayValue(first_name);
     cy.findByDisplayValue(last_name);
     cy.findByDisplayValue(email);

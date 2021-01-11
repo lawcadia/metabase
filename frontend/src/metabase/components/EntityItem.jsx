@@ -135,12 +135,12 @@ const EntityItem = ({
           <Swapper
             startSwapped={selected}
             defaultElement={
-              <Icon name={iconName} color={"inherit"} size={18} />
+              <Icon name={iconName} color={color("white")} size={18} />
             }
             swappedElement={<CheckBox checked={selected} size={18} />}
           />
         ) : (
-          <Icon name={iconName} color={"inherit"} size={18} />
+          <Icon name={iconName} color={color("white")} size={18} />
         )}
       </IconWrapper>
       <Box>
@@ -155,6 +155,7 @@ const EntityItem = ({
         {item.description && (
           <Icon
             tooltip={item.description}
+            color={color("white")}
             name="info"
             className="ml1 text-medium"
           />

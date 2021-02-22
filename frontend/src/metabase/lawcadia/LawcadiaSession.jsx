@@ -24,11 +24,13 @@ export default class LawcadiaSession extends Component {
   componentDidMount()
   {
     const token = this.props.location.query.token;
+    const redirect = this.props.location.query.redirect
+    console.log(token);
+    console.log(redirect);
     if(token){
-      console.log(token);
       this.authViaSessionID(token);
     }
-    window.location.href="/auth/login";
+    window.location.href = redirect;
   }
 
   render() {
